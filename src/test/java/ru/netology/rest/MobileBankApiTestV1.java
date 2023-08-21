@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-class MobileBankApiTestV1 {
+class MobileBankApiTestV1<matchesJsonSchemaInClasspath> {
+
     @Test
     void shouldReturnDemoAccounts() {
         // Given - When - Then
@@ -18,4 +19,5 @@ class MobileBankApiTestV1 {
                 .then()
                 .statusCode(200);
     }
+
 }
